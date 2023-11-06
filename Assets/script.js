@@ -19,7 +19,13 @@ $(function () {
     // Save the description in local storage with the time block id as the key
     localStorage.setItem(timeBlockId, description);
   });
-  
+
+  // Apply Time Block Colors
+  var currentHour = dayjs().hour();
+  $(".time-block").each(function () {
+    var timeBlockHour = parseInt($(this).attr("id").split("-")[1]);
+    
+
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
