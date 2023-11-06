@@ -47,6 +47,19 @@ $(function () {
     }
   }
 
+  // Function to load saved data from local storage
+  function loadSavedData() {
+    for (var hour = 9; hour <= 17; hour++) {
+      var textArea = $("#text-" + hour);
+      var savedData = localStorage.getItem("hour-" + hour);
+      if (savedData) {
+        textArea.val(savedData);
+      }
+    }
+  }
+
+  
+
 
 
 
