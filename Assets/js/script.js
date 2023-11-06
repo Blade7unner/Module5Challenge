@@ -32,7 +32,22 @@ $(function () {
       var saveIcon = $("<i>").addClass("fas fa-save").attr("aria-hidden", "true");
       saveButton.append(saveIcon);
 
-      
+      // Compare the current hour with the loop hour to determine the class
+      if (hour < currentHour) {
+        timeBlock.addClass("past");
+      } else if (hour === currentHour) {
+        timeBlock.addClass("present");
+      } else {
+        timeBlock.addClass("future");
+      }
+
+      timeBlock.append(hourDisplay, textArea, saveButton);
+
+      $(".container-lg").append(timeBlock);
+    }
+  }
+
+
 
 
   
