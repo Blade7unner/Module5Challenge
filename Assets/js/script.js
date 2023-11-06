@@ -11,43 +11,9 @@ $(function () {
   // Function to generate time blocks and apply past/present/future classes
   function generateTimeBlocks() {
     var currentHour = dayjs().hour();
-    
 
-  // Handle Save Button Click
-  $(".saveBtn").on("click", function () {
 
-    // Get the id of the corresponding time block
-    var timeBlockId = $(this).parent().attr("id");
-
-    // Get the text from the associated text area
-    var description = $(this).siblings(".description").val();
-
-    // Save the description in local storage with the time block id as the key
-    localStorage.setItem(timeBlockId, description);
-  });
-
-  // Apply Time Block Colors
-  var currentHour = dayjs().hour();
-  $(".time-block").each(function () {
-    var timeBlockHour = parseInt($(this).attr("id").split("-")[1]);
-    if (timeBlockHour < currentHour) {
-      $(this).addClass("past");
-    } else if (timeBlockHour === currentHour) {
-      $(this).addClass("present");
-    } else {
-      $(this).addClass("future");
-    }
-  });
   
-  // Load Saved Events
-  $(".time-block").each(function () {
-    var timeBlockId = $(this).attr("id");
-    var savedDescription = localStorage.getItem(timeBlockId);
-    $(this).children(".description").val(savedDescription);
-  });
-
-
-});
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
