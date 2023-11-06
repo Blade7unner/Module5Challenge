@@ -2,10 +2,11 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  // Display Current Date
-  var currentDayEl = $("#currentDay");
-  var currentDay = dayjs().format("dddd, MMMM D");
-  currentDayEl.text(currentDay);
+  // Function to get the current date and display it in the header
+  function displayCurrentDate() {
+    var currentDate = dayjs().format("dddd, MMMM D, YYYY");
+    $("#currentDay").text(currentDate);
+  }
 
   // Handle Save Button Click
   $(".saveBtn").on("click", function () {
