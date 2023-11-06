@@ -8,6 +8,11 @@ $(function () {
     $("#currentDay").text(currentDate);
   }
 
+  // Function to generate time blocks and apply past/present/future classes
+  function generateTimeBlocks() {
+    var currentHour = dayjs().hour();
+    
+
   // Handle Save Button Click
   $(".saveBtn").on("click", function () {
 
