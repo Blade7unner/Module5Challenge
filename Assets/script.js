@@ -33,6 +33,12 @@ $(function () {
     }
   });
   
+  // Load Saved Events
+  $(".time-block").each(function () {
+    var timeBlockId = $(this).attr("id");
+    var savedDescription = localStorage.getItem(timeBlockId);
+    $(this).children(".description").val(savedDescription);
+  });
 
 
 
