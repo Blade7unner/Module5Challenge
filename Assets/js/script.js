@@ -12,6 +12,14 @@ $(function () {
   function generateTimeBlocks() {
     var currentHour = dayjs().hour();
 
+     // Loop through hours from 9 to 17 (5 PM)
+     for (var hour = 9; hour <= 17; hour++) {
+      var timeBlock = $("<div>")
+        .addClass("row time-block")
+        .attr("id", "hour-" + hour);
+
+     
+
 
   
 
