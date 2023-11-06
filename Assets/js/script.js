@@ -58,7 +58,22 @@ $(function () {
     }
   }
 
-  
+  // Function to save user input to local storage
+  $(".container-lg").on("click", ".saveBtn", function () {
+    var hour = $(this).parent().attr("id");
+    var userText = $(this).siblings(".description").val();
+    localStorage.setItem(hour, userText);
+  });
+
+  // Call functions to display the current date, generate time blocks, and load saved data
+  displayCurrentDate();
+  generateTimeBlocks();
+  loadSavedData();
+});
+
+
+
+
 
 
 
