@@ -18,7 +18,21 @@ $(function () {
         .addClass("row time-block")
         .attr("id", "hour-" + hour);
 
-     
+        var hourDisplay = $("<div>")
+        .addClass("col-2 col-md-1 hour text-center py-3")
+        .text(dayjs().hour(hour).format("ha"));
+
+        var textArea = $("<textarea>")
+        .addClass("col-8 col-md-10 description")
+        .attr("id", "text-" + hour);
+
+        var saveButton = $("<button>")
+        .addClass("btn saveBtn col-2 col-md-1")
+        .attr("aria-label", "save");
+      var saveIcon = $("<i>").addClass("fas fa-save").attr("aria-hidden", "true");
+      saveButton.append(saveIcon);
+
+      
 
 
   
