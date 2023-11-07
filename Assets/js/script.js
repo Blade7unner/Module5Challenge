@@ -63,6 +63,14 @@ $(function () {
     var hour = $(this).parent().attr("id");
     var userText = $(this).siblings(".description").val();
     localStorage.setItem(hour, userText);
+  
+    // Display a message after saving
+    $("#message").text("Event saved successfully.").addClass("alert-success").show();
+  
+    // Hide the message after 3 seconds (adjust the duration as needed)
+    setTimeout(function () {
+      $("#message").hide();
+    }, 3000);
   });
 
   // Call functions to display the current date, generate time blocks, and load saved data
