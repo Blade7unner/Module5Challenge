@@ -36,12 +36,12 @@ The Work Day Scheduler is a simple calendar application that allows you to save 
 
 ## Deployed Application
 
-You can access the deployed Work Day Scheduler application [here](https://your-deployed-app-url.com).
+You can access the deployed Work Day Scheduler application [here](https://blade7unner.github.io/Module5Challenge/).
 
 
 ## Screenshots
 
-![Work Day Scheduler Screenshot](./assets/images/screenshot.png)
+[Work Day Scheduler Screenshot](./assets/images/screenshot.png)
 
 
 
